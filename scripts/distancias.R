@@ -18,7 +18,7 @@ dist_depto<-geosphere::distm(centroides_depto) #dist en metros
 colnames(dist_depto)<-as.character(shape_depto@data$NOMBRE_DPT)
 rownames(dist_depto)<-as.character(shape_depto@data$NOMBRE_DPT)
 
-write.csv(dist_depto, "output/dist_deptos.csv", row.names = FALSE)
+write.csv(dist_depto, "output/dist_deptos.csv", row.names = TRUE)
 
 # Municipios --------------------------------------------------------------
 
@@ -36,4 +36,4 @@ dist_mun<-geosphere::distm(centroides_mun) #dist en metros
 colnames(dist_mun)<-as.character(shape_mun@data$MPIOS)
 rownames(dist_mun)<-as.character(shape_mun@data$MPIOS)
 
-write.csv(dist_mun, "output/dist_mun.csv", row.names = FALSE)
+write.csv(dist_mun, "output/dist_mun.csv", row.names = TRUE)
